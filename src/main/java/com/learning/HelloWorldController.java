@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloWorldController {
 	
-	private String name;
 	
 	@RequestMapping("/greet/{name}")
 	public String greet(@PathVariable("name") String name) {
@@ -17,6 +16,7 @@ public class HelloWorldController {
 		return "Welcome to Springboot " + name + " " + new Date();
 	}
 
+	//two perforn addition of two numbers
 	@RequestMapping("/add/{one}/{two}")
 	public String add(@PathVariable("one") Integer numberOne, @PathVariable("two") Integer numberTwo) {
 		System.out.println("request recieved");
